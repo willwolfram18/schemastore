@@ -45,10 +45,12 @@
       "type": "object",
       "properties": {
         "name": {
-          "type": "string"
+          "type": "string",
+          "description": "The template symbol to store the generated port number"
         },
         "useHttps": {
-          "type": "boolean"
+          "type": "boolean",
+          "description": "Determines if the generated port is to be used for HTTPS"
         }
       }
     }
@@ -118,6 +120,10 @@
       "items": {
         "$ref": "#/definitions/port"
       }
+    },
+    "disableHttpsSymbol": {
+      "type": "boolean",
+      "description": "The template symbol that determines whether or not HTTPS should be disabled for the new project."
     }
   }
 }
